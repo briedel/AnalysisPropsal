@@ -1,1 +1,57 @@
 \section{SNDAQ Changes}
+
+The likelihood used in the SNDAQ online analysis relies on assumption that the noise rate on a per DOM level is Gaussian distributed, i.e. that the noise is purely Poissonic in nature. The per-DOM noise rate over long time scales however is known to be log-normal distributed
+
+\begin{equation}
+    f_{X}(x; \mu, \sigma) = \frac{1}{x \sigma \sqrt{2\pi}} \textrm{exp} \left\{ -\frac{1}{2} \left( \frac{ln(x) - \mu}{\sigma}  \right)^{2} \right\}
+\end{equation}
+
+\noindent where $\mu$ is the location parameter and $\sigma$ is the scale parameter. Over a short time scales as used in the SNDAQ analysis, i.e. \unit[11]{minutes}, the log-normal behavior can be approximated with a Gaussian 
+
+\begin{equation}
+    f_{X}(x; \mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}} \textrm{exp} \left\{ -\frac{1}{2} \left( \frac{x - \mu}{\sigma}  \right)^{2} \right\}
+\end{equation}
+
+\noindent where $\mu$ is the mean and $\sigma$ is the standard deviation or variance. 
+
+Given Gaussian behavior of the DOM noise, we can measure a collective increase rate of the detector, $\Delta \mu$, employing the likelihood
+
+\begin{equation}
+    \mathcal{L}(\Delta \mu) = \prod_{i=1}^{N_{\textrm{DOM}}} \frac{1}{\sigma_{i} \sqrt{2\pi}} \textrm{exp} \left\{ -\frac{1}{2} \left( \frac{r_{i} - (\mu_{i } + \epsilon_{i}\Delta \mu)}{\sigma_{i}}  \right)^{2} \right\}
+\end{equation}
+
+\noindent where $r_{i}$ is the rate in the signal bin, $\mu_{i}$ and $\sigma_{i}$ is the average rate and error on the average rate estimated from the background region. From maximizing the log-likelihood we can obtain an analytical form of $\Delta \mu$:
+
+\begin{equation}
+  \Delta \mu = \sigma_{\Delta \mu} \sum_{i = 1}^{N_{\textrm{DOM}}} \frac{\epsilon_{i}}{\sigma_{i}} (r_{i} - \mu_{i})
+\end{equation}
+
+\noindent where 
+
+\begin{equation}
+  \sigma_{\Delta \mu} = \left( \sum_{i = 1}^{N_{\textrm{DOM}}} \frac{\epsilon_{i}^{2}}{\sigma_{i}^{2}} \right)^{-1}
+\end{equation}
+
+The assumption of purely Poissonic noise however appears to break down to do the non-Poissnic nature of the muon background on a per-DOM basis. A possible solution for this is the use a likelihood based on a log-normal distribution:
+
+\begin{equation}
+    \mathcal{L}(\Delta \mu) = \prod_{i=1}^{N_{\textrm{DOM}}} \frac{1}{\sigma_{i} r_{i} \sqrt{2\pi} } \textrm{exp} \left\{ -\frac{1}{2} \left( \frac{ln(r_{i}) - (\mu_{i} + \epsilon_{i}\Delta \mu)}{\sigma_{i}}  \right)^{2} \right\}
+\end{equation}
+
+\noindent where 
+
+\begin{equation}
+  \mu_{i} = ln\left( \frac{m^{2}}{\sqrt{ v + m^{2}}}\right)
+\end{equation}
+
+\noindent and
+
+\begin{equation}
+  \sigma_{i} = \sqrt{ ln(1 + \frac{v}{m^{2}}) }
+\end{equation}
+
+\noindent $m$ and $v$ are the mean and variance of the data, respectively. This changes $\Delta \mu$, such that
+
+\begin{equation}
+  \Delta \mu = \sigma_{\Delta \mu} \sum_{i = 1}^{N_{\textrm{DOM}}} \frac{\epsilon_{i}}{\sigma_{i}} (ln(r_{i}) - \mu_{i})
+\end{equation}
