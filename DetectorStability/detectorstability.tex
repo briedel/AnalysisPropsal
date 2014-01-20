@@ -1,41 +1,117 @@
 \section{Detector Stability}
 
-Analysis of the detector stability using of partial detectors, 40-string though 79-string configuration, in \cite{vbaumaster} and \cite{mkrasbergtalk} showed that there was significant rise in noise that could be attributed to the recently deployed strings and the on going freeze-in process. For the full detector, the same effect is seen, see Figure~\ref{fig:snscalerIC86ItoIII}. The freeze-in process had an significant effect on the first half of the first full year of data taking, see Figure~\ref{fig:snscalerIC86I}. As the freeze-in process subsides, the annular modulation of the muon rate with temperature, see Figure~\ref{fig:muonseasonal}, causes the detector rate to have a sinusoidal-like time dependence. This becomes the most significant contribution to detector instability over time. 
+Analysis of the detector stability using of partial detectors, 40-string though 79-string configuration, in \cite{vbaumaster} and \cite{mkrasbergtalk} showed that there was significant noise due to the freeze-in process. For the full detector, the same effect is seen, see Figure~\ref{fig:snscalerIC86ItoIII} and Figure~\ref{fig:snscalerIC86I}. As the freeze-in process subsides, the annular modulation of the muon rate with temperature, see Figure~\ref{fig:muonseasonal}, causes the detector rate to have a sinusoid-like time dependence. This becomes the most significant contribution to detector instability over time. A similar effect can also be seen in the detector SLC rate, see Figure~\ref{fig:SLCrateIC86ItoIII}. 
 
-\begin{figure}
-  
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=1\textwidth]{./figures/SNScalerRateTotalAvgIC86I_III.png} 
+  \end{center}
+  \caption{ Total (Top) and Average (Bottom) Supernova Scaler Rate as function of time. The seasonal variation of the muon rate can be seen as a sinusoid-like pattern in the data, while the affect of the freeze-in can be seen clearly in the rate decay in IC86-2011. There is also a continual decay in rate of unknown origin.\\
+  Note: Top plot is in Kilohertz, while bottom plot is in Hertz.\label{fig:snscalerIC86ItoIII}}   
 \end{figure}
 
-Figure~\ref{fig:snscalerIC86ItoIII} also reveals a continual decay in the detector rate throughout the operation of the full detector configuration. Comparison of supernova scaler rate for the 86-string configuration for strings deployed at all the different construction cycles, see Figure~\ref{fig:scalerrateage}, shows that the decay is on-going even several years after deployment. Similarly, the freeze-in progresses has a depth dependence the, see Figure~\ref{fig:scalerratedepth}. The origin of this decay is unknown. There are multiple possible explanations that can be examined from the data:
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=1\textwidth]{./figures/SNScalerRateTotalAvgIC86I.png} 
+  \end{center}
+  \caption{ Total (Top) and Average (Bottom) Supernova Scaler Rate as function of time for the first year of IC86, IC86-2011. The freeze-in process dominates the rate over the course of the first half of IC86-2011, but becomes subdominant due to effects from muons. \\
+  Note: Top plot is in Kilohertz, while bottom plot is in Hertz.\label{fig:snscalerIC86I}}   
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=1\textwidth]{./figures/airs_dst_teff_daily.png}
+  \end{center}
+  \caption{Black line shows muon rate seasonal modulation as percentage deviation from average. For reference, the atmospheric temperature as a percentage deviation from average in grey and atmospheric pressure. \label{fig:muonseasonal}}   
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=1\textwidth]{./figures/AvgSLCRateIC86I_III.png} 
+  \end{center}
+  \caption{ Total (Top Panels) and Average (Bottom Panels) SLC as function of time. The seasonal variation of the muon rate can be seen as a sinusoid-like pattern in the data, while the affect of the freeze-in can be seen in the decay in the rate over the course IC86-2011 to -2013. The jump in rate about a quarter into IC86-2011 is due to changes in the deadtime by a factor of 10 (0.25\% to 0.025\%) and the subsequent addition of non-Poissonic noise to the SLC rate.\\
+  Note: Top plots are in Kilohertz, while bottom plots are in Hertz.\label{fig:SLCrateIC86ItoIII}}   
+\end{figure}
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=1\textwidth]{./figures/SNScalerRateAgeIC86I_III.png}
+  \end{center}
+  \caption{Supernova Scaler Rate of Strings that have been deployed at different generations of the detector. String 21 for IC1, String 50 for IC9, String 56 for IC22, String 52 for IC40, String 10 for IC59, String 33 for IC79, String 85 for IC79 DeepCore, String 1 for IC86, String 79 for IC85 DeepCore. \label{fig:scalerrateage}}   
+\end{figure}
+
+Figure~\ref{fig:snscalerIC86ItoIII} and~\ref{fig:SLCrateIC86ItoIII} also reveal a continual decay in the detector rate throughout the operation of the full detector configuration. Comparison of supernova scaler rate for the 86-string configuration for strings deployed at all the different construction cycles, see Figure~\ref{fig:scalerrateage}, shows that the decay is on-going even several years after deployment. Similarly, the freeze-in progresses has a depth dependence the, see Figure~\ref{fig:scalerratedepth}. The origin of this decay is unknown. There are multiple possible explanations that can be examined from the data:
+
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=1\textwidth]{./figures/SNScalerRateLayersIC86I_III.png}
+  \end{center}
+  \caption{Supernova Scaler Rate of DOMs at different depths. DOM 1 are DOMs at the top of the detector, DOM 15 are in the middle of the top half, DOM 30 are in middle and inside the dust layer, DOM 45 are in the middle of the bottom half of the detector, and DOM 60 are the bottom of the detector. This excludes the DOMs from DeepCore as their geometry is different. \label{fig:scalerratedepth}}   
+\end{figure}
 
 \begin{itemize}
   \item Construction effects: Continuation of the freeze-in process
   \item Detector effects: Detector aging and drift of detector settings away from optimal values
 \end{itemize}
 
-The freeze-in process continues even after the ice appears to be solid, as shown by the ``Swedish Camera'', a camera system deployed in the deep ice at the end of String 80. Recordings from the ``Swedish Camera'', see Figure~\ref{fig:swedencamera}, have shown that the ice surrounding the bore hole continues to change over the years. The air and particles trapped in the ice from drilling and refilling the bore holes are being pressed into a central column. This processes appears to be on-going and may cause low levels of triboluminescence similar to those associated with the solidification process that are seen as a decay in the supernova scaler, see Figure~\ref{fig:snscalerIC86I}. 
+The freeze-in process continues even after the ice appears to be solid, as shown by the ``Swedish Camera'', a camera system deployed in the deep ice at the end of String 80. Recordings from the ``Swedish Camera'' have shown that the ice surrounding the bore hole continues to change over the years. The air and particles trapped in the ice from drilling and refilling the bore holes are being pressed into a central column. This processes appears to be on-going and may cause low levels of triboluminescence similar to those associated with the solidification process that are seen as a decay in the supernova scaler, see Figure~\ref{fig:snscalerIC86I}. 
 
-To establish the decay rate for the individual DOMs, a fit of a decaying exponential:
+To establish the decay rate for the individual DOMs, a fit of:
 
 \begin{equation}
-  R(t) = A + B \times \textrm{exp}\left( -\tau t \right)   
+  R(t) = A + R_{\mu} (t) + \left( C \textrm{exp}\left( -\tau t \right) \right)
+  \label{eq:scalerratebreakdown}
 \end{equation} 
 
-\noindent is needed to the scaler data. The sinusoidal-like effect of the atmospheric muons has to be removed before such a fit can be produced. The IceCube trigger-level data has a significantly higher energy threshold and lower rate than the scaler data, i.e. $\approx \unit[2100]{Hz}$ versus $\approx \unit[5200]{Hz}$. To estimate the atmospheric muon effect with a lower energy threshold, the HLC rate for individual DOMs from the pDAQ log-files is extracted. The pDAQ log-files show a HLC rate of $\mathcal{O}(\unit[10]{Hz})$. This HLC rate mimics the effect of the atmospheric muons, as only two effects can set off the HLC condition: noise triggers on adjacent DOMs or by-passing muons. The coincidence rate, $R_{C}$, between two DOMs, assuming a noise rate of \unit[500]{Hz} for each DOM, is given by
+\noindent where $A$ is baseline noise from the DOM, $R_{\mu}$ is the time-dependent atmospheric muon rate contribution to the scaler rate, and $C \textrm{exp}\left( -\tau t \right)$ is the contribution of the decay rate to the SN scaler rate, has to be performed on the SN scaler rate. \cite{vbaumaster} used the IceCube trigger-level data to estimate the atmospheric muon contribution. This data however has a significantly higher energy threshold, $\approx \unit[400-800]{GeV}$ depending on depth versus $\approx \unit[1]{TeV}$ and lower rate than the scaler data, i.e. $\approx \unit[2100]{Hz}$ versus $\approx \unit[5200]{Hz}$. 
 
-\begin{eqnarray}
-  R_{C} &=& R_{1} R_{2} 2\Delta t \\ &=& (\unit[500]{Hz})(\unit[500]{Hz})(\unit[2 \times 10^{-6}]{s}) \\ &=& \unit[0.5]{Hz}
-\end{eqnarray}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=1\textwidth]{./figures/AvgHLCRateIC86I_III.png}
+  \end{center}
+  \caption{Total (Top) and Average (Bottom) HLC as function of time.\label{fig:HLCratevstimenocorrection}}}   
+\end{figure}
 
-\noindent where $R_{1}$ is the rate of DOM 1, $R_{2}$ is the rate of DOM 2, and $\Delta t$ is the possible time window which these two can overlap, in this case the HLC condition window of \unit[1]{$\mu$s}. In case of the HLC condition we have to take the rates 5 DOMs into consideration, i.e. 2 DOMs above and 2 DOMs below. This means the coincidence rate is given by
+The HLC rate for individual DOMs from the pDAQ log-files provides an estimate of the atmospheric muon effect with a lower energy threshold. This HLC rate mimics the effect of the atmospheric muons, see Figure~\ref{fig:HLCratevstimenocorrection}. A correction factor, $R_{C}$, has to be subtracted from the HLC rate, as there are HLC due to noise. Assuming that the SLC rate is purely Poissonic, $R_{C}$ can be esimated using
 
 \begin{equation}
-  R_{C} $=$ 2 \Delta t R_{3}\left( R_{1} + R_{2} + R{4} + R{5} \right)
+  R_{C} = 2 \Delta t R_{3}\left( R_{1} + R_{2} + R_{4} + R_{5} \right)
 \end{equation}
 
-\noindent where $R_{3}$ is the rate of the central DOM, and $R_{1, 2, 4, 5}$ is the rate of the surrounding DOMs. The noise rate for each DOM can be estimated using the SLC rate and the SN scaler rate for each DOM. The coincidence rate to satisfy the HLC condition can be approximated as to \unit[2]{Hz}. The remaining rate can be attributed to the effect of atmospheric muon. 
+\noindent where $R_{3}$ is the rate of the central DOM, and $R_{1, 2, 4, 5}$ is the rate of the surrounding DOMs. The rate for each DOM is estimated using the SLC rate for each DOM. The remaining rate can be attributed to the effect of atmospheric muons, see Figure~\ref{fig:fig:HLCratevstimecorrected}.
 
-The SN scalers have a lower energy threshold than HLC though as they are sensitive to individual hits. The rate of individual hits attributed to atmospheric muons has to estimated from simulation. The single hit rate in data can be estimated by simulating muons with a known spectrum and determining the per-DOM single hit and HLC rate. The per-DOM single hit rate can than be scaled according to the ratio of the per-DOM HLC rate between simulation and data. 
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=1\textwidth]{./figures/AvgHLCRateIC86I_III_Minus_Coincidence.png}
+  \end{center}
+  \caption{Total (Top) and Average (Bottom) HLC as function of time after coincidence rate is removed. \label{fig:HLCratevstimecorrected}}}   
+\end{figure}
+
+The response to atmospheric muons is different for SN scaler rate and the HLC rate. SN scalers have a much longer deadtime compared to SLC and HLC rates, \unit[250]{$\mu$s} versus $\approx$\unit[2.5]{$\mu$s}. The HLC rate requires two DOMs to participate, while SN scalers is sensitive to individual DOMs. This is pre-dominately a concern for DOMs on the edge of the detector. The definition of $A$ and $R_{\mu} (t)$ from Equation~\ref{eq:scalerratebreakdown} has to therefore be changed slightly to estimate the atmopsheric muon contribution to the SN scaler rate. $A$ aborbs the average atmoshperic muon rate that effect the SN scalers, while $R_{\mu} (t)$ becomes the deviation of the atmopsheric muon rate from this average. Equation~\ref{eq:scalerratebreakdown} is more apbtly described by
+
+\begin{equation}
+  R(t) = R_{\textrm{\DOM}} + R_{\mu} + B \Delta R_{\textrm{HLC}} (t) + \left( C \textrm{exp}\left( -\tau t \right) \right)
+  \label{eq:scalerratenewbreakdown}
+\end{equation}
+
+\noindent where 
+
+\begin{equation}
+   \Delta R_{\textrm{HLC}} (t) = R_{\textrm{HLC}} (t) - \langle R_{\textrm{HLC}} \rangle
+\end{equation}
+
+\noindent and $B$ is scaling factor that compensates for the difference in HLC and SN scaler sensitivity. $B$ can be found by letting it freely float while fitting for $\tau$ in Equation~\ref{eq:scalerratenewbreakdown}. This subtraction method has already proven usable to reduce the affect of atmospheric muons ont the SLC rate, see Figure~\ref{fig:SLCratewandwoHLCmuon}. If the fitting does not work properly one can estimate the scaling factor by simulating atmohsperic muons without detector noise and determine if the scaling factor of SLC atmospheric muons rate to HLC atmospheric muons rate as a function of energy. 
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=1\textwidth]{./figures/SLCRateHLCsubtractionIC862.png}
+  \end{center}
+  \caption{Total (Top) and Average (Bottom) SLC as function of time for IC86-2012 with and without muon substraction \label{fig:SLCratewandwoHLCmuon}}}   
+\end{figure}
+
+
+ % in order to esimate The rate of individual hits attributed to atmospheric muons has to estimated from simulation. The single hit rate in data can be estimated by simulating muons with a known spectrum and determining the per-DOM single hit and HLC rate. The per-DOM single hit rate can than be scaled according to the ratio of the per-DOM HLC rate between simulation and data. 
 
 % This fit assumes that the sinusoidal-like effect produced by the atmospheric muons averages out over time and is absorbed into the term for the average Poisson rate of DOM noise and atmospheric muons, $A$. A fit to the data from the dust layer would suppress the effect of the muon background, see Figure~\ref{fig:scalerratedepth} Panel for DOMs at position 35, but would not capture the depth dependence of the freeze-in process. 
 
@@ -57,6 +133,6 @@ The SN scalers have a lower energy threshold than HLC though as they are sensiti
 
 Effects from detector aging would be hard to disentangle from difference in the DOM components between different revisions of the DOM hardware and possible freeze-in effects. Further long-term studies with the DOMs in the freezer at Physical Science Laboratory would be necessary.
 
-A drift of detector settings away from optimal values should be detectable from changes in the time constant of supernova scaler decay rate between strings deployed at the different construction cycles and during physics run transitions, respectively. A drift away from optimal values should be detectable by a jump or sink in the supernova scaler during the run transition. A jump in the detector rate was found during the physics run transitions, see Figure~\ref{fig:snscalerIC86ItoIII}. This jump can be attributed to the addition of previously removed DOMs from the detector configuration. There are no jump or sinks in the rate for the strings in Figure~\ref{fig:scalerrateage} during run transition leading to the conclusion that the effect of the new calibration values in minimal. 
+A drift of detector settings away from optimal values should be detectable from changes in the time constant of supernova scaler decay rate between strings deployed at the different construction cycles and during physics run transitions, respectively. A drift away from optimal values should be detectable by a jump or sink in the supernova scaler during the run transition. A jump in the detector rate was found during the physics run transitions, see Figure~\ref{fig:snscalerIC86ItoIII}. This jump can be attributed to the addition of previously removed DOMs from the detector configuration, see bottom plot of Figure~\ref{fig:snscalerIC86ItoIII}, and to slight shifts in the detector settings.
 
 
