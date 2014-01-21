@@ -1,6 +1,6 @@
 \section{Detector Stability}
 
-Analysis of the detector stability using of partial detectors, 40-string though 79-string configuration, in \cite{vbaumaster} and \cite{mkrasbergtalk} showed that there was significant noise due to the freeze-in process. For the full detector, the same effect is seen, see Figure~\ref{fig:snscalerIC86ItoIII} and Figure~\ref{fig:snscalerIC86I}. As the freeze-in process subsides, the annular modulation of the muon rate with temperature, see Figure~\ref{fig:muonseasonal}, causes the detector rate to have a sinusoid-like time dependence. This becomes the most significant contribution to detector instability over time. A similar effect can also be seen in the detector SLC rate, see Figure~\ref{fig:SLCrateIC86ItoIII}. 
+Analysis of the detector stability using of partial detectors, 40-string though 79-string configuration, in \cite{vbaumaster} and \cite{mkrasbergtalk} showed that there was significant noise due to the freeze-in process. For the full detector, the same effect is seen, see Figure~\ref{fig:snscalerIC86ItoIII} and \ref{fig:snscalerIC86I}. After solid ice is formed, the annular modulation of the atmospheric muon rate with atmospheric temperature, see Figure~\ref{fig:muonseasonal}, causes the detector rate to have a sinusoid-like time dependence. This becomes the most significant contribution to detector instability over time. Similar affects can be seen in the detector SLC rate, see Figure~\ref{fig:SLCrateIC86ItoIII}. 
 
 \begin{figure}[h]
   \begin{center}
@@ -40,8 +40,7 @@ Analysis of the detector stability using of partial detectors, 40-string though 
   \caption{Supernova Scaler Rate of Strings that have been deployed at different generations of the detector. String 21 for IC1, String 50 for IC9, String 56 for IC22, String 52 for IC40, String 10 for IC59, String 33 for IC79, String 85 for IC79 DeepCore, String 1 for IC86, String 79 for IC85 DeepCore. \label{fig:scalerrateage}}   
 \end{figure}
 
-Figure~\ref{fig:snscalerIC86ItoIII} and~\ref{fig:SLCrateIC86ItoIII} also reveal a continual decay in the detector rate throughout the operation of the full detector configuration. Comparison of supernova scaler rate for the 86-string configuration for strings deployed at all the different construction cycles, see Figure~\ref{fig:scalerrateage}, shows that the decay is on-going even several years after deployment. Similarly, the freeze-in progresses has a depth dependence the, see Figure~\ref{fig:scalerratedepth}. The origin of this decay is unknown. There are multiple possible explanations that can be examined from the data:
-
+Figure~\ref{fig:snscalerIC86ItoIII} and~\ref{fig:SLCrateIC86ItoIII} also reveal a continual decay in the detector rate throughout the operation of the full detector configuration. Comparison of supernova scaler rate for the 86-string configuration for strings deployed at different construction cycles, see Figure~\ref{fig:scalerrateage}, shows that the decay is on-going even several years after deployment. Similarly, the freeze-in progresses has a depth dependence, see Figure~\ref{fig:scalerratedepth} and \cite{mkrasbergtalk}. The origin of this decay is unknown. There are multiple possible explanations that can be examined from the data:
 
 \begin{figure}[h]
   \begin{center}
@@ -55,7 +54,7 @@ Figure~\ref{fig:snscalerIC86ItoIII} and~\ref{fig:SLCrateIC86ItoIII} also reveal 
   \item Detector effects: Detector aging and drift of detector settings away from optimal values
 \end{itemize}
 
-The freeze-in process continues even after the ice appears to be solid, as shown by the ``Swedish Camera'', a camera system deployed in the deep ice at the end of String 80. Recordings from the ``Swedish Camera'' have shown that the ice surrounding the bore hole continues to change over the years. The air and particles trapped in the ice from drilling and refilling the bore holes are being pressed into a central column. This processes appears to be on-going and may cause low levels of triboluminescence similar to those associated with the solidification process that are seen as a decay in the supernova scaler, see Figure~\ref{fig:snscalerIC86I}. 
+The freeze-in process continues even after the ice appears to be solid, as shown by the ``Swedish Camera'', a camera system deployed in the deep ice at the end of String 80. Recordings from the ``Swedish Camera'' have shown that the ice surrounding the bore hole continues to change over the years. The air and particles trapped in the ice from drilling and refilling the bore holes are being pressed into a central column. This processes appears to be on-going and may cause low levels of triboluminescence similar to those associated with the solidification process that are seen as a decay in the supernova scaler. 
 
 To establish the decay rate for the individual DOMs, a fit of:
 
@@ -73,7 +72,7 @@ To establish the decay rate for the individual DOMs, a fit of:
   \caption{Total (Top) and Average (Bottom) HLC as function of time.\label{fig:HLCratevstimenocorrection}}}   
 \end{figure}
 
-The HLC rate for individual DOMs from the pDAQ log-files provides an estimate of the atmospheric muon effect with a lower energy threshold. This HLC rate mimics the effect of the atmospheric muons, see Figure~\ref{fig:HLCratevstimenocorrection}. A correction factor, $R_{C}$, has to be subtracted from the HLC rate, as there are HLC due to noise. Assuming that the SLC rate is purely Poissonic, $R_{C}$ can be esimated using
+The HLC rate for individual DOMs from the pDAQ log-files provides an estimate of the atmospheric muon effect with a lower energy threshold. This HLC rate mimics the effect of the atmospheric muons, see Figure~\ref{fig:HLCratevstimenocorrection}. A correction factor, $R_{C}$, has to be subtracted from the HLC rate, as there are HLCs due to noise. Assuming that the SLC rate is purely Poissonic, $R_{C}$ can be estimated using
 
 \begin{equation}
   R_{C} = 2 \Delta t R_{3}\left( R_{1} + R_{2} + R_{4} + R_{5} \right)
@@ -88,7 +87,7 @@ The HLC rate for individual DOMs from the pDAQ log-files provides an estimate of
   \caption{Total (Top) and Average (Bottom) HLC as function of time after coincidence rate is removed. \label{fig:HLCratevstimecorrected}}}   
 \end{figure}
 
-The response to atmospheric muons is different for SN scaler rate and the HLC rate. SN scalers have a much longer deadtime compared to SLC and HLC rates, \unit[250]{$\mu$s} versus $\approx$\unit[2.5]{$\mu$s}. The HLC rate requires two DOMs to participate, while SN scalers is sensitive to individual DOMs. This is pre-dominately a concern for DOMs on the edge of the detector. The definition of $A$ and $R_{\mu} (t)$ from Equation~\ref{eq:scalerratebreakdown} has to therefore be changed slightly to estimate the atmopsheric muon contribution to the SN scaler rate. $A$ aborbs the average atmoshperic muon rate that effect the SN scalers, while $R_{\mu} (t)$ becomes the deviation of the atmopsheric muon rate from this average. Equation~\ref{eq:scalerratebreakdown} is more apbtly described by
+The response to atmospheric muons is different for SN scaler rate and the HLC rate. SN scalers have a much longer deadtime compared to SLC and HLC rates, \unit[250]{$\mu$s} versus $\approx$\unit[2.5]{$\mu$s}. The HLC rate requires two DOMs to participate, while SN scalers is sensitive to individual DOMs. This is predominately a concern for DOMs on the edge of the detector. The definition of $A$ and $R_{\mu} (t)$ from Equation~\ref{eq:scalerratebreakdown} has to therefore be changed slightly to estimate the atmospheric muon contribution to the SN scaler rate. $A$ absorbs the average atmospheric muon rate that effect the SN scalers, while $R_{\mu} (t)$ becomes the deviation of the atmospheric muon rate from this average. Equation~\ref{eq:scalerratebreakdown} is more aptly described by
 
 \begin{equation}
   R(t) = R_{\textrm{\DOM}} + R_{\mu} + B \Delta R_{\textrm{HLC}} (t) + \left( C \textrm{exp}\left( -\tau t \right) \right)
@@ -101,7 +100,7 @@ The response to atmospheric muons is different for SN scaler rate and the HLC ra
    \Delta R_{\textrm{HLC}} (t) = R_{\textrm{HLC}} (t) - \langle R_{\textrm{HLC}} \rangle
 \end{equation}
 
-\noindent and $B$ is scaling factor that compensates for the difference in HLC and SN scaler sensitivity. $B$ can be found by letting it freely float while fitting for $\tau$ in Equation~\ref{eq:scalerratenewbreakdown}. This subtraction method has already proven usable to reduce the affect of atmospheric muons ont the SLC rate, see Figure~\ref{fig:SLCratewandwoHLCmuon}. If the fitting does not work properly one can estimate the scaling factor by simulating atmohsperic muons without detector noise and determine if the scaling factor of SLC atmospheric muons rate to HLC atmospheric muons rate as a function of energy. 
+\noindent and $B$ is scaling factor that compensates for the difference in HLC and SN scaler sensitivity. $B$ can be found by letting it freely float while fitting for $\tau$ in Equation~\ref{eq:scalerratenewbreakdown}. This subtraction method has already proven usable to reduce the affect of atmospheric muons ont the SLC rate, see Figure~\ref{fig:SLCratewandwoHLCmuon}. If the fitting does not work properly one can estimate the scaling factor by simulating atmospheric muons without detector noise and determine if the scaling factor of SLC atmospheric muons rate to HLC atmospheric muons rate as a function of energy. 
 
 \begin{figure}[h]
   \begin{center}
